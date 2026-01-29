@@ -25,7 +25,7 @@ def get_weather():
     return render_template(
         "weather.html",
         title= weather_data['name'],
-        status= weather_data['weather'][0]['description'],#.capitalze(),
+        status= weather_data['weather'][0]['description'].title(),
         temp = f"{weather_data['main']['temp']:.1f}",
         feels_like= f"{weather_data['main']['feels_like']:.1f}"
         )
